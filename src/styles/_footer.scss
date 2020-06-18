@@ -1,0 +1,15 @@
+.footer {
+    &__credentials {
+        margin: 0 auto;
+        color: #fff;
+        font-size: $footer-font-size-main;
+        text-align: right;
+    }
+
+    &__icon {
+        line-height: 100%;
+        width: 2.8rem;
+        height: $footer-font-size-main;
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,26 @@
+import React from 'react';
+
+import styles from '../../table.content';
+
+const TabHeader = props => {
+
+    return (
+
+        <div className='tab__line--header' id='header-stick'>
+            <div className='tab__heading-cell tab__heading-cell--side'>&#xa0;</div>
+            {[...Array(11)].map((x, i) =>
+                i > 1 ?
+                    <React.Fragment key={i}>
+                        <div className='tab__empty-cell tab__empty-cell--head'>&#x2b;</div>
+                        <div className={`tab__heading-cell ${styles[i]}`}>{i}</div>
+                        {x}
+                    </React.Fragment>
+                    : null
+            )}
+            <div className='tab__heading-cell tab__heading-cell--side'>&#xa0;</div>
+        </div>
+
+    )
+};
+
+export default TabHeader;
