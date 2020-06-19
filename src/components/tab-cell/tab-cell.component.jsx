@@ -1,17 +1,18 @@
 import React from 'react';
 
+import content from '../../table.content';
+
 import IconCircle from '../icons-svg/icon-circle.component';
 
 const TabCell = props => {
 
-    // const renderScoreRow = () => {
+    const getRoundedHalfANumber = (number) => {
+        return Math.round(number / 2);
+    }
 
-    //     var dots = [];
-    //     for (var i = 1; i <= props.number; i++) {
-    //         dots.push(<IconCircle key={i} className={`component__icon _${i}`} />);
-    //     }
-    //     return <div className='component__score-row'>{dots}</div>
-    // }
+    const getTopLineDotsAmount = () => {
+        return props.line > 2 ? getRoundedHalfANumber(props.line) : props.line;
+    }
 
     return (
         <div className='component'>
@@ -19,18 +20,31 @@ const TabCell = props => {
                 <input
                     type='number'
                     pattern='[0-9]*'
-                    inputmode='numeric'
+                    inputMode='numeric'
                     className='component__input'
                     placeholder=' '
                     min={props.value}
                     max={props.value}
                     step='1'
-                ></input>
+                />
             </div>
             <div className='component__score'>
-                {[...Array(props.number)].map((x, i) =>
-                    <IconCircle key={i} className={`component__icon _${i}`} />
-                )}
+                <div className="component__score-row">
+                    {[...Array(getTopLineDotsAmount())].map((x, i) =>
+                        <IconCircle
+                            key={i}
+                            className={`component__icon ${content.styles[i + 1]}`}
+                        />
+                    )}
+                </div>
+                <div className="component__score-row">
+                    {[...Array(props.line - getTopLineDotsAmount())].map((x, i) =>
+                        <IconCircle
+                            key={i + getRoundedHalfANumber(props.line)}
+                            className={`component__icon ${content.styles[i + 1 + getRoundedHalfANumber(props.line)]}`}
+                        />
+                    )}
+                </div>
             </div>
         </div>
     )

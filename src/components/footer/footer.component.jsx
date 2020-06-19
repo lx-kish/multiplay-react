@@ -3,7 +3,7 @@ import React from 'react';
 import IconHeart from '../icons-svg/icon-heart.component';
 import IconLxKish from '../icons-svg/icon-lx-kish.component';
 
-const Footer = props => {
+const Footer = () => {
 
     return (
         <footer className='footer'>
@@ -14,7 +14,7 @@ const Footer = props => {
                 </span>
                 by
                 <span className='footer__icon-box'>
-                    <IconLxKish className='footer__icon three' />
+                    <IconLxKish className='footer__icon nine' />
                 </span>
                 Alexander Kish
             </p>

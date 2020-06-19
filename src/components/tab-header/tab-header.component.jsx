@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../table.content';
+import content from '../../table.content';
 
 const TabHeader = props => {
 
@@ -12,8 +12,7 @@ const TabHeader = props => {
                 i > 1 ?
                     <React.Fragment key={i}>
                         <div className='tab__empty-cell tab__empty-cell--head'>&#x2b;</div>
-                        <div className={`tab__heading-cell ${styles[i]}`}>{i}</div>
-                        {x}
+                        <div className={`tab__heading-cell ${content.styles[i]}`}>{i}</div>
                     </React.Fragment>
                     : null
             )}
