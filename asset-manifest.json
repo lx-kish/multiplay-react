@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/multiplay-react/static/css/main.6815ea75.chunk.css",
+    "main.js": "/multiplay-react/static/js/main.97ef88ab.chunk.js",
+    "main.js.map": "/multiplay-react/static/js/main.97ef88ab.chunk.js.map",
+    "runtime-main.js": "/multiplay-react/static/js/runtime-main.32f8f433.js",
+    "runtime-main.js.map": "/multiplay-react/static/js/runtime-main.32f8f433.js.map",
+    "static/js/2.5ba0a642.chunk.js": "/multiplay-react/static/js/2.5ba0a642.chunk.js",
+    "static/js/2.5ba0a642.chunk.js.map": "/multiplay-react/static/js/2.5ba0a642.chunk.js.map",
+    "index.html": "/multiplay-react/index.html",
+    "precache-manifest.c027fddcd4c72bedd2f5a38dbb87a374.js": "/multiplay-react/precache-manifest.c027fddcd4c72bedd2f5a38dbb87a374.js",
+    "service-worker.js": "/multiplay-react/service-worker.js",
+    "static/css/main.6815ea75.chunk.css.map": "/multiplay-react/static/css/main.6815ea75.chunk.css.map",
+    "static/js/2.5ba0a642.chunk.js.LICENSE.txt": "/multiplay-react/static/js/2.5ba0a642.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32f8f433.js",
+    "static/js/2.5ba0a642.chunk.js",
+    "static/css/main.6815ea75.chunk.css",
+    "static/js/main.97ef88ab.chunk.js"
+  ]
+}
