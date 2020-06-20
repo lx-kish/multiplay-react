@@ -8,18 +8,18 @@ import TabLine from '../tab-line/tab-line.component';
 // import TabCell from '../tab-cell/tab-cell.component';
 
 
-//PLUS SIGN = &#x2b;
-//MINUS SIGN = &#x2212;
 const Tab = props => {
 
     const sign = () => {
+        //PLUS SIGN = &#x2b;
+        //MINUS SIGN = &#x2212;
         return <>&#x2b;</>
     }
 
     return (
         <main className='main'>
             <section className='tab'>
-                <TabHeader sign={sign()}/>
+                <TabHeader sign={sign()} />
                 <TabEmptyLine sign={sign()} />
                 {[...Array(11)].map((x, i) =>
                     i > 1 ?

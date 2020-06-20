@@ -14,7 +14,7 @@ const Footer = () => {
                 </span>
                 by
                 <span className='footer__icon-box'>
-                    <IconLxKish className='footer__icon nine' />
+                    <IconLxKish className='footer__icon seven' />
                 </span>
                 Alexander Kish
             </p>

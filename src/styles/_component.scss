@@ -85,6 +85,14 @@
             width: .5rem;
             height: .5rem;
         }
+
+        &:not(:last-child) {
+            margin-right: .25rem;
+
+            @include respond(_360-400) {
+                margin-right: 0;
+            }
+        }
     }
 }
 
