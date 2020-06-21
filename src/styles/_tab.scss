@@ -29,7 +29,7 @@
         // padding: 2.6rem .2rem 0;
         line-height: 2rem;
         font-size: 3rem;
-        color: #ffffff;
+        color: var(--color-white);
         font-family: sans-serif;
 
         // background-color: yellowgreen;
@@ -58,7 +58,7 @@
     position: fixed;
     top: 0;
     width: auto;
-    background-color: $color-primary;
+    background-color: var(--color-background);
     // overflow:scroll;
 
     & + .tab__line--empty-stick {

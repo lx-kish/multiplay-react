@@ -2,86 +2,86 @@
     // color: #565656;
     // fill: #565656;
     // border-color: #565656;
-    color: #504935;
-    fill: #504935;
-    border-color: #504935;
+    color: var(--color-one);
+    fill: var(--color-one);
+    border-color: var(--color-one);
 }
 
 .two {
-    color: #ffe600;
-    fill: #ffe600;
-    border-color: #ffe600;
+    color: var(--color-two);
+    fill: var(--color-two);
+    border-color: var(--color-two);
 }
 
 .three {
     // color: #f10f0f;
     // fill: #f10f0f;
-    color: #fd2115;
-    fill: #fd2115;
-    border-color: #fd2115;
+    color: var(--color-three);
+    fill: var(--color-three);
+    border-color: var(--color-three);
 }
 
 .four {
     // color: #59ff3c;
     // fill: #59ff3c;
     // border-color: #59ff3c;
-    color: #46877e;
-    fill: #46877e;
-    border-color: #46877e;
+    color: var(--color-four);
+    fill: var(--color-four);
+    border-color: var(--color-four);
 }
 
 .five {
     // color: #00dd88;
     // fill: #00dd88;
-    color: #0400ff;
-    fill: #0400ff;
-    border-color: #0400ff;
+    color: var(--color-five);
+    fill: var(--color-five);
+    border-color: var(--color-five);
 }
 
 .six {
-    color: #00d9ff;
-    fill: #00d9ff;
-    border-color: #00d9ff;
-    color: #0a79fd;
-    fill: #0a79fd;
-    border-color: #0a79fd;
+    // color: #00d9ff;
+    // fill: #00d9ff;
+    // border-color: #00d9ff;
+    color: var(--color-six);
+    fill: var(--color-six);
+    border-color: var(--color-six);
 }
 
 .seven {
     // color: #4400ff;
     // fill: #4400ff;
-    color: #8f1b7b;
-    fill: #8f1b7b;
-    border-color: #8f1b7b;
+    color: var(--color-seven);
+    fill: var(--color-seven);
+    border-color: var(--color-seven);
 }
 
 .eight {
     // color: #ae00ff;
     // fill: #ae00ff;
-    color: #ff00aa;
-    fill: #ff00aa;
-    border-color: #ff00aa;
+    color: var(--color-eight);
+    fill: var(--color-eight);
+    border-color: var(--color-eight);
 }
 
 .nine {
     // color: #f56709;
     // fill: #f56709;
     // border-color: #f56709;
-    color: #590504;
-    fill: #590504;
-    border-color: #590504;
+    color: var(--color-nine);
+    fill: var(--color-nine);
+    border-color: var(--color-nine);
 }
 
 .ten {
     // color: #00ffff;
     // fill: #00ffff;
-    color: #ffe600;
-    fill: #ffe600;
-    border-color: #ffe600;
+    color: var(--color-ten);
+    fill: var(--color-ten);
+    border-color: var(--color-ten);
 }
 
 .white {
-    color: #ffffff;
-    fill: #ffffff;
-    border-color: #ffffff;
+    color: var(--color-white);
+    fill: var(--color-white);
+    border-color: var(--color-white);
 }

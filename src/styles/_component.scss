@@ -16,12 +16,12 @@
         border: none;
         outline: none;
         border: 2px solid;
-        border-color: #ffffff;
+        border-color: var(--color-white);
         border-radius: 1rem;
         text-align: center;
         font-size: 4rem;
         // width: 75%;
-        color: #ffffff;
+        color: var(--color-white);
 
         @include respond(_360-400) {
             border-width: .5px;
@@ -52,7 +52,7 @@
         }
 
         &:invalid {
-            color: red;
+            color: var(--color-red);
             // border-right: 2px solid var(--color__accent);
         }
 
@@ -95,25 +95,3 @@
         }
     }
 }
-
-// .inputfield {
-//     background-color: #73a53e;
-//     border: none;
-//     outline: none;
-//     border-bottom: 2px solid #33342d;
-//     text-align: center;
-//     font-size: 6em;
-//     width: 75%;
-//     color: #ffffff;
-// }
-
-// input:-webkit-autofill,
-// input:-webkit-autofill:hover,
-// input:-webkit-autofill:focus,
-// input:-webkit-autofill:active {
-//     -webkit-box-shadow: 0 0 0 30px #73a53e inset !important;
-// }
-
-// input:-webkit-autofill {
-//     -webkit-text-fill-color: #ffffff !important;
-// }

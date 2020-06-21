@@ -20,7 +20,7 @@
         background: transparent;
         cursor: pointer;
 
-        border: 0.2rem solid $color-white;
+        border: 0.2rem solid var(--color-white);
 
         @include transition(0.4s);
 
@@ -35,17 +35,15 @@
 
             @include transition(0.4s);
 
-            background-color: $color-white;
+            background-color: var(--color-white);
         }
 
-        &:checked {
-            // background-color: yellowgreen;
-        }
+        // &:checked {
+        //     // background-color: yellowgreen;
+        // }
 
         &:checked::before {
             left: 55%;
-
-            // background-color: orangered;
         }
 
         &:focus {

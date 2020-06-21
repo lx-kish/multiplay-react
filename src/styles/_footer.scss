@@ -1,7 +1,7 @@
 .footer {
     &__credentials {
         margin: 0 auto;
-        color: #fff;
+        color: var(color-white);
         font-size: $footer-font-size-main;
         text-align: right;
     }
