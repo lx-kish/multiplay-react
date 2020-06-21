@@ -13,13 +13,17 @@ const Tab = props => {
     const sign = () => {
         //PLUS SIGN = &#x2b;
         //MINUS SIGN = &#x2212;
-        return <>&#x2b;</>
+        // return <>&#x2b;</>
+        return props.sign;
     }
 
     return (
         <main className='main'>
             <section className='tab'>
-                <TabHeader sign={sign()} />
+                <TabHeader
+                    sign={sign()}
+                    id={'header-stick'}
+                />
                 <TabEmptyLine sign={sign()} />
                 {[...Array(11)].map((x, i) =>
                     i > 1 ?
@@ -32,7 +36,10 @@ const Tab = props => {
                         : null
                 )}
                 {/* <TabCell number={5} /> */}
-                <TabHeader />
+                <TabHeader
+                    sign={sign()}
+                    id={''}
+                />
             </section>
         </main>
     )

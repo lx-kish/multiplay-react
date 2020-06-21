@@ -6,14 +6,27 @@ import IconCircle from '../icons-svg/icon-circle.component';
 
 const TabCell = props => {
 
+    /**
+    * Rounds half a number to a bigger whole digit
+    * @return {Number} amount of dots on the top line
+    */
     const getWholeHalfANumber = aNumber => {
         return Math.round(aNumber / 2);
     }
 
+    /**
+    * Split the amount of dots into 2 lines if amount bigger than 2
+    * @return {Number} amount of dots on the top line
+    */
     const getTopLineDotsAmount = () => {
         return props.line > 2 ? getWholeHalfANumber(props.line) : props.line;
     }
 
+    /**
+    * Returns an Input className, all Inputs have the same,
+    * except Input for 100
+    * @return {String} className for Input field
+    */
     const getInputClassName = () => {
         return props.value < 100 ?
             'component__input' :
@@ -75,10 +88,15 @@ const TabCell = props => {
 
     }
 
+    /**
+    * Handles key-down event, runs key validation, 
+    * decline input of the key if invalid
+    * @return {void}
+    */
     const handleKeyDown = (e) => {
 
         if (applyKeyDown(e)) {
-            // console.log(applyKeyDown(e));
+
             e.preventDefault();
         }
 
