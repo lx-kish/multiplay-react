@@ -11,6 +11,39 @@
 //   // overflow: hidden;
 // }
 
+:root {
+  ////////////////////////////////////////////////
+  // COLORS
+
+  --color-one: #{$color-one};
+
+  --color-two: #{$color-two};
+
+  --color-three: #{$color-three};
+
+  --color-four: #{$color-four};
+
+  --color-five: #{$color-five};
+
+  --color-six: #{$color-six};
+
+  --color-seven: #{$color-seven};
+
+  --color-eight: #{$color-eight};
+
+  --color-nine: #{$color-nine};
+
+  --color-ten: #{$color-ten};
+
+  --color-background: #{$color-background};
+
+  //BLACK
+  --color-black: #{$color-black};
+
+  //WHITE
+  --color-white: #{$color-white};
+}
+
 html {
   //defines how many px is 1rem
   font-size: 62.5%; //1rem = 10px (10px/16px = 62.5%)

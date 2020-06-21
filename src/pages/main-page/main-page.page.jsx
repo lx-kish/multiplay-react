@@ -11,7 +11,8 @@ const MainPage = props => {
      */
     const [fullState, setFullState] = React.useState({
         sticky: 0,
-        checked: false,
+        display: false,
+        subtract: false,
         sign: <>&#x2b;</>
     });
 
@@ -26,7 +27,7 @@ const MainPage = props => {
 
     /**
      * React hook useEffect for updating sticky state property
-     * on checked property changing
+     * on display property changing
      */
     React.useEffect(() => {
 
@@ -35,7 +36,7 @@ const MainPage = props => {
             sticky: getHeaderOffsetTop()
         })
 
-    }, [fullState.checked]);
+    }, [fullState.display]);
 
     /**
      * React hook useEffect for stick header on scrolling
@@ -64,11 +65,18 @@ const MainPage = props => {
     return (
         <>
             <Header
-                checked={fullState.checked}
+                display={fullState.display}
+                subtract={fullState.subtract}
                 setChecked={() =>
                     setFullState({
                         ...fullState,
-                        checked: !fullState.checked
+                        display: !fullState.display
+                    })
+                }
+                setSubtract={() =>
+                    setFullState({
+                        ...fullState,
+                        subtract: !fullState.subtract
                     })
                 }
             />

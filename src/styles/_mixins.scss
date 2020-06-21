@@ -1,3 +1,10 @@
+@mixin transition($duration) {
+    -webkit-transition: all $duration ease;
+    -moz-transition: all $duration ease;
+    -o-transition: all $duration ease;
+    transition: all $duration ease;
+  }
+
 ////////////////////////////////////////////////
 // MEDIA QUERY MANAGER
 

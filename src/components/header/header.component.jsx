@@ -5,7 +5,7 @@ import IconChevronDown from '../icons-svg/icon-chevron-down.component';
 const Header = props => {
 
     const showCollapsible = () => {
-        return props.checked ?
+        return props.display ?
             <div className='collapsible__part'>
                 <hr className='header__hr' />
                 <p className='header__description'>
@@ -29,22 +29,34 @@ const Header = props => {
             <div className='collapsible'>
                 <hr className='header__hr' />
                 <h3 className='collapsible__title header__title--small'>How to use</h3>
-
                 <input
                     type='checkbox'
                     className='collapsible__btn'
                     id='collapsible-toggle'
-                    checked={props.checked}
+                    checked={props.display}
                     onChange={() => props.setChecked()}
-                    // onChange={showCollapsible()}
-                    // onChange={this.handleShowInstructionsChange}
+                // onChange={showCollapsible()}
+                // onChange={this.handleShowInstructionsChange}
                 />
-
                 <label htmlFor='collapsible-toggle' className='collapsible__icon-box'>
                     <IconChevronDown className='collapsible__icon' />
                 </label>
                 {showCollapsible()}
                 <hr className='header__hr' />
+                <div className="add-subtract-toggle__box">
+                    <label htmlFor="addition-subtraction">
+                        <span className='header__description'>addition</span>
+                        <input
+                            type='checkbox'
+                            className='add-subtract-toggle__input'
+                            id='addition-subtraction'
+                            checked={props.subtract}
+                            onChange={() => props.setSubtract()}
+                        />
+                        <span className='header__description'>subtraction</span>
+                        <hr className='header__hr' />
+                    </label>
+                </div>
             </div>
         </header>
 
