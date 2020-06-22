@@ -50,10 +50,10 @@ const MainPage = props => {
      */
     React.useEffect(() => {
 
-        setFullState({
-            ...fullState,
-            sticky: getHeaderOffsetTop()
-        })
+        // setFullState({
+        //     ...fullState,
+        //     sticky: getHeaderOffsetTop()
+        // })
 
         const scrollCallBack = window.addEventListener('scroll', () => {
             const header = document.getElementById('header-stick');
