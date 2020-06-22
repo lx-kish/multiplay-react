@@ -10,34 +10,30 @@ import TabLine from '../tab-line/tab-line.component';
 
 const Tab = props => {
 
-    const sign = () => {
-        //PLUS SIGN = &#x2b;
-        //MINUS SIGN = &#x2212;
-        // return <>&#x2b;</>
-        return props.sign;
-    }
-
     return (
         <main className='main'>
             <section className='tab'>
                 <TabHeader
-                    sign={sign()}
+                    subtract={props.subtract}
+                    sign={props.sign}
                     id={'header-stick'}
                 />
-                <TabEmptyLine sign={sign()} />
+                <TabEmptyLine sign={props.sign} />
                 {[...Array(11)].map((x, i) =>
                     i > 1 ?
                         <TabLine
                             key={i}
                             className={content.styles[i]}
                             value={i}
-                            sign={sign()}
+                            subtract={props.subtract}
+                            sign={props.sign}
                         />
                         : null
                 )}
                 {/* <TabCell number={5} /> */}
                 <TabHeader
-                    sign={sign()}
+                    subtract={props.subtract}
+                    sign={props.sign}
                     id={''}
                 />
             </section>

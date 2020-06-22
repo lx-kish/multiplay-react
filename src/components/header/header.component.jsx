@@ -25,7 +25,7 @@ const Header = props => {
             <h1 className='header__title'>
                 Multiply me
             </h1>
-            <h3 className='header__title--small'>learn multiplication by addition</h3>
+            <h3 className='header__title--small'>learn multiplication by addition and subtraction</h3>
             <div className='collapsible'>
                 <hr className='header__hr' />
                 <h3 className='collapsible__title header__title--small'>How to use</h3>

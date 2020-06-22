@@ -13,11 +13,18 @@ const MainPage = props => {
         sticky: 0,
         display: false,
         subtract: false,
-        sign: <>&#x2b;</>
     });
 
     /**
-     * Gets offsetTop of the 'header-stick' section for sticking
+     * Returns mathematical sign for addition or subtraction
+     * @return {html entity} sign code
+     */
+    const getSign = () => {
+        return fullState.subtract ? <>&#x2212;</> : <>&#x2b;</>
+    }
+
+    /**
+     * Gets and returns offsetTop of the 'header-stick' section
      * @return {Number} offsetTop
      */
     const getHeaderOffsetTop = () => {
@@ -80,10 +87,10 @@ const MainPage = props => {
                     })
                 }
             />
-
             <Tab
                 sticky={fullState.sticky}
-                sign={fullState.sign}
+                subtract={fullState.subtract}
+                sign={getSign()}
             />
             <Footer />
         </>
