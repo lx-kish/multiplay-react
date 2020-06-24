@@ -50,11 +50,6 @@ const MainPage = props => {
      */
     React.useEffect(() => {
 
-        // setFullState({
-        //     ...fullState,
-        //     sticky: getHeaderOffsetTop()
-        // })
-
         const scrollCallBack = window.addEventListener('scroll', () => {
             const header = document.getElementById('header-stick');
             if (window.pageYOffset >= fullState.sticky) { //sticky) {
@@ -68,6 +63,20 @@ const MainPage = props => {
             window.removeEventListener('scroll', scrollCallBack);
         };
     }, [fullState.sticky]);
+
+    /**
+     * React hook useEffect for empty input when toggle addition/subtraction
+     */
+    React.useEffect(() => {
+
+        let inputs = document.getElementsByClassName('component__input');
+        // console.log(typeof(inputs))
+        inputs = Array.from(inputs);
+        inputs.map(input => {
+            input.value = '';
+        })
+
+    }, [fullState.subtract]);
 
     return (
         <>
