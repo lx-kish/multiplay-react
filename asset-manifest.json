@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/multiplay-react/static/css/main.410b0c8c.chunk.css",
-    "main.js": "/multiplay-react/static/js/main.3027009b.chunk.js",
-    "main.js.map": "/multiplay-react/static/js/main.3027009b.chunk.js.map",
+    "main.css": "/multiplay-react/static/css/main.0aa361a2.chunk.css",
+    "main.js": "/multiplay-react/static/js/main.3563a65e.chunk.js",
+    "main.js.map": "/multiplay-react/static/js/main.3563a65e.chunk.js.map",
     "runtime-main.js": "/multiplay-react/static/js/runtime-main.32f8f433.js",
     "runtime-main.js.map": "/multiplay-react/static/js/runtime-main.32f8f433.js.map",
     "static/js/2.7cfe32cf.chunk.js": "/multiplay-react/static/js/2.7cfe32cf.chunk.js",
     "static/js/2.7cfe32cf.chunk.js.map": "/multiplay-react/static/js/2.7cfe32cf.chunk.js.map",
     "index.html": "/multiplay-react/index.html",
-    "precache-manifest.aad5282c12881f49146b0dc7c346ec0c.js": "/multiplay-react/precache-manifest.aad5282c12881f49146b0dc7c346ec0c.js",
+    "precache-manifest.1e19fd2e5844b8eda7e354d3fef7c6a0.js": "/multiplay-react/precache-manifest.1e19fd2e5844b8eda7e354d3fef7c6a0.js",
     "service-worker.js": "/multiplay-react/service-worker.js",
-    "static/css/main.410b0c8c.chunk.css.map": "/multiplay-react/static/css/main.410b0c8c.chunk.css.map",
+    "static/css/main.0aa361a2.chunk.css.map": "/multiplay-react/static/css/main.0aa361a2.chunk.css.map",
     "static/js/2.7cfe32cf.chunk.js.LICENSE.txt": "/multiplay-react/static/js/2.7cfe32cf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.32f8f433.js",
     "static/js/2.7cfe32cf.chunk.js",
-    "static/css/main.410b0c8c.chunk.css",
-    "static/js/main.3027009b.chunk.js"
+    "static/css/main.0aa361a2.chunk.css",
+    "static/js/main.3563a65e.chunk.js"
   ]
 }
