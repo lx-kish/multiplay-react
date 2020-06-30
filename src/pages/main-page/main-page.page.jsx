@@ -33,6 +33,19 @@ const MainPage = props => {
     };
 
     /**
+    * Empty all the table inputs
+    * @return {void} 
+    */
+    const emptyInputs = () => {
+        let inputs = document.getElementsByClassName('component__input');
+        // console.log(typeof(inputs))
+        inputs = Array.from(inputs);
+        inputs.map(input => {
+            input.value = '';
+        })
+    };
+
+    /**
      * React hook useEffect for updating sticky state property
      * on display property changing
      */
@@ -69,12 +82,7 @@ const MainPage = props => {
      */
     React.useEffect(() => {
 
-        let inputs = document.getElementsByClassName('component__input');
-        // console.log(typeof(inputs))
-        inputs = Array.from(inputs);
-        inputs.map(input => {
-            input.value = '';
-        })
+        emptyInputs();
 
     }, [fullState.subtract]);
 

@@ -63,8 +63,10 @@ const TabCell = props => {
         * instant return to prevent overflowing
         */
         if ((e.target.max < 100 && e.target.value.length > 1) //length > 2
-            || (e.target.max === 100 && e.target.value.length > 2)) //in "100" length > 3
+            || (e.target.max >= 100 && e.target.value.length > 2)) //in "100" length > 3
+        // || (e.target.max === 100 && e.target.value.length > 2)) //in "100" length > 3
         {
+            console.log(e.target.value, e.which, e.target.max, e.target.value.length);
             return true;
         }
 
