@@ -7,26 +7,26 @@ import IconCircle from '../icons-svg/icon-circle.component';
 const TabCell = props => {
 
     /**
-    * Rounds half a number to a bigger whole digit
-    * @return {Number} amount of dots on the top line
-    */
-    const getWholeHalfANumber = aNumber => {
+     * Rounds half a number to a bigger whole digit
+     * @return {Number} amount of dots on the top line
+     */
+    const getRoundedHalfANumber = aNumber => {
         return Math.round(aNumber / 2);
     }
 
     /**
-    * Split the amount of dots into 2 lines if amount bigger than 2
-    * @return {Number} amount of dots on the top line
-    */
+     * Split the amount of dots into 2 lines if amount bigger than 2
+     * @return {Number} amount of dots on the top line
+     */
     const getTopLineDotsAmount = () => {
-        return props.line > 2 ? getWholeHalfANumber(props.line) : props.line;
+        return props.line > 2 ? getRoundedHalfANumber(props.line) : props.line;
     }
 
     /**
-    * Returns an Input className, all Inputs have the same,
-    * except Input for 100
-    * @return {String} className for Input field
-    */
+     * Returns an Input className, all Inputs have the same,
+     * except Input for 100
+     * @return {String} className for Input field
+     */
     const getInputClassName = () => {
         return props.value < 100 ?
             'component__input' :
@@ -42,15 +42,16 @@ const TabCell = props => {
 
         var value = true;
 
-        /* arrows up & down are allways denied
-        * to prevent choosing right answer from keyboard 
-        */
+        /**
+         * arrows up & down are allways denied
+         * to prevent choosing right answer from keyboard 
+         */
         if (e.which === 38 || e.which === 40) {
             return true;
         }
 
-        /* delete, backspace and tab are always allowed 
-        */
+        /** delete, backspace and tab are always allowed 
+         */
         if (e.which === 8  //backspace
             || e.which === 46 //delete
             || e.which === 9)  //tab
@@ -58,10 +59,10 @@ const TabCell = props => {
             return false;
         }
 
-        /* more than 2 digits in a 2-digits fields,
-        * more than 3 digits in a 3-digits field
-        * instant return to prevent overflowing
-        */
+        /** more than 2 digits in a 2-digits fields,
+         * more than 3 digits in a 3-digits field
+         * instant return to prevent overflowing
+         */
         if ((e.target.max < 100 && e.target.value.length > 1) //length > 2
             || (e.target.max >= 100 && e.target.value.length > 2)) //in "100" length > 3
         // || (e.target.max === 100 && e.target.value.length > 2)) //in "100" length > 3
@@ -70,12 +71,12 @@ const TabCell = props => {
             return true;
         }
 
-        /* https://stackoverflow.com/questions/13196945/keycode-values-for-numeric-keypad/13196983
-        * The problem with keyCode is to avoid the combined keys
-        * with the numbers on top of keyboard, we must add a check
-        *  on the key "Shift" and "Alt" to avoid special characters
-        * such as e @ & " { } ...
-        */
+        /** https://stackoverflow.com/questions/13196945/keycode-values-for-numeric-keypad/13196983
+         * The problem with keyCode is to avoid the combined keys
+         * with the numbers on top of keyboard, we must add a check
+         *  on the key "Shift" and "Alt" to avoid special characters
+         * such as e @ & " { } ...
+         */
         let key = Number(e.key)
         if (isNaN(key) || e.key === null || e.key === ' ') {
             // console.log("is not numeric");
@@ -91,10 +92,10 @@ const TabCell = props => {
     }
 
     /**
-    * Handles key-down event, runs key validation, 
-    * decline input of the key if invalid
-    * @return {void}
-    */
+     * Handles key-down event, runs key validation, 
+     * decline input of the key if invalid
+     * @return {void}
+     */
     const handleKeyDown = (e) => {
 
         if (applyKeyDown(e)) {
@@ -133,8 +134,8 @@ const TabCell = props => {
                 <div className="component__score-row">
                     {[...Array(props.line - getTopLineDotsAmount())].map((x, i) =>
                         <IconCircle
-                            key={i + getWholeHalfANumber(props.line)}
-                            className={`component__icon ${content.styles[i + 1 + getWholeHalfANumber(props.line)]}`}
+                            key={i + getRoundedHalfANumber(props.line)}
+                            className={`component__icon ${content.styles[i + 1 + getRoundedHalfANumber(props.line)]}`}
                         />
                     )}
                 </div>

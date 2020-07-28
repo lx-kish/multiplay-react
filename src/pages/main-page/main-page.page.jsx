@@ -78,6 +78,24 @@ const MainPage = props => {
     }, [fullState.sticky]);
 
     /**
+    * React hook useEffect for updating sticky state property
+    * on resizing
+    */
+    React.useEffect(() => {
+
+        const resizeCallBack = window.addEventListener('resize', () => {
+            setFullState({
+                ...fullState,
+                sticky: getHeaderOffsetTop()
+            })
+        });
+
+        return () => {
+            window.removeEventListener('resize', resizeCallBack);
+        };
+    }, [fullState.sticky]);
+
+    /**
      * React hook useEffect for empty input when toggle addition/subtraction
      */
     React.useEffect(() => {
