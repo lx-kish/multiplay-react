@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import MultiplicationTab from './pages/multiplication-tab/multiplication-tab.page';
 import AdditionSubtraction from './pages/addition-subtraction/addition-subtraction.page';
@@ -10,8 +10,10 @@ import AdditionSubtraction from './pages/addition-subtraction/addition-subtracti
 const Routes = () => {
 	return (
 		<Switch>
-				<Route path="/multiplication-tab" exact component={MultiplicationTab} />
-				<Route path="/addition-subtraction" exact component={AdditionSubtraction} />
+			<Route path="/multiplay-react" exact component={MultiplicationTab} />
+			{/* <Route exact path="/" render={() => <Redirect to="/multiplication-tab" />} /> */}
+			<Route path="/multiplay-react/multiplication-tab" exact component={MultiplicationTab} />
+			<Route path="/multiplay-react/addition-subtraction" exact component={AdditionSubtraction} />
 		</Switch>
 	);
 };
