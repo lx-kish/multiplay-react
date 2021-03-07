@@ -1,6 +1,6 @@
 import React from 'react';
 
-import content from '../../table.content';
+import content from '../../../table.content';
 
 const TabHeader = props => {
 

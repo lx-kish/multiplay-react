@@ -1,10 +1,14 @@
 import React from 'react';
 
-import Header from '../../components/header/header.component';
-import Footer from '../../components/footer/footer.component';
-import Tab from '../../components/table/tab.component';
+import useClickOutside from '../../utils/use-click-outside/useClickOutside';
 
-const MainPage = props => {
+import Header from '../../components/headers/multiplication-tab/header.component';
+import Footer from '../../components/footer/footer.component';
+import Tab from '../../components/multiplication-tab/table/tab.component';
+
+import NavigationBar from '../../components/navigation/navigation-bar/navigation-bar.component';
+
+const MultiplicationTab = props => {
 
     /**
      * Single state hook useState for all the state properties
@@ -13,7 +17,26 @@ const MainPage = props => {
         sticky: 0,
         display: false,
         subtract: false,
+        open: false,
     });
+
+    const menuRef = React.useRef();
+
+	const setState = () => {
+		setFullState({
+			...fullState,
+			open: !fullState.open
+		});
+	};
+
+	const hideSliderMenu = () => {
+		setFullState({
+			...fullState,
+			open: false
+		});
+	};
+  
+	useClickOutside(menuRef, hideSliderMenu);
 
     /**
      * Returns mathematical sign for addition or subtraction
@@ -29,7 +52,11 @@ const MainPage = props => {
      */
     const getHeaderOffsetTop = () => {
         const header = document.getElementById('header-stick');
-        return header.offsetTop;
+        if (header) {
+            return header.offsetTop;
+        } else {
+            return null;
+        }
     };
 
     /**
@@ -65,10 +92,13 @@ const MainPage = props => {
 
         const scrollCallBack = window.addEventListener('scroll', () => {
             const header = document.getElementById('header-stick');
-            if (window.pageYOffset >= fullState.sticky) { //sticky) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
+            // console.log('header from useEffect ===> ', header);
+            if (header) {
+                if (window.pageYOffset >= fullState.sticky) { //sticky) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
             }
         });
 
@@ -106,6 +136,7 @@ const MainPage = props => {
 
     return (
         <>
+        	<NavigationBar open={fullState.open} setOpen={setState} hideSliderMenu={hideSliderMenu} menuRef={menuRef} />
             <Header
                 display={fullState.display}
                 subtract={fullState.subtract}
@@ -132,4 +163,4 @@ const MainPage = props => {
     )
 };
 
-export default MainPage;
+export default MultiplicationTab;

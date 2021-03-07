@@ -1,6 +1,6 @@
 import React from 'react';
 
-import content from '../../table.content';
+import content from '../../../table.content';
 
 import TabHeader from '../tab-header/tab-header.component';
 import TabEmptyLine from '../tab-empty-line/tab-empty-line.component';

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.scss';
 
-import MainPage from './pages/main-page/main-page.page';
+import MainPage from './pages/multiplication-tab/multiplication-tab.page';
 
 const App = () => {
 

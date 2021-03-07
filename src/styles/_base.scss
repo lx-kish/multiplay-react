@@ -36,6 +36,7 @@
   --color-ten: #{$color-ten};
 
   --color-background: #{$color-background};
+  --color-background-85: #{$color-background-85};
 
   --color-red: #{$color-red};
 
@@ -159,4 +160,15 @@ header,
 nav,
 section {
   display: block;
+}
+
+/*
+ * For putting footer to the bottom of the page despite of the height of content 
+ */
+#root {
+
+  overflow: hidden; //to prevent internal elements brake the design if they oversized 'page' container
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; //to make height of the page 100% of viewport
 }

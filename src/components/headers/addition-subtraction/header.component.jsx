@@ -1,8 +1,8 @@
 import React from 'react';
 
-import IconChevronDown from '../icons-svg/icon-chevron-down.component';
+import IconChevronDown from '../../icons-svg/icon-chevron-down.component';
 
-import Toggler from '../toggler/toggler.component';
+import Toggler from '../../toggler/toggler.component';
 
 const content = {
     togglerAddSubtract: {
@@ -57,11 +57,11 @@ const Header = props => {
 
         <header className='header'>
             <h1 className='header__title'>
-                Multiply me
+                Addition and Subtraction
             </h1>
-            <h3 className='header__title--small'>learn multiplication by addition and subtraction</h3>
-            <div className='collapsible'>
-                <hr className='header__hr' />
+            <h3 className='header__title--small'>train your skill of addition and subtraction</h3>
+            <hr className='header__hr' />
+            {/* <div className='collapsible'>
                 <h3 className='collapsible__title header__title--small'>How to use</h3>
                 <input
                     type='checkbox'
@@ -81,7 +81,7 @@ const Header = props => {
                     onChange={() => props.setSubtract()}
                 />
                 <hr className='header__hr' />
-            </div>
+            </div> */}
         </header>
 
     )

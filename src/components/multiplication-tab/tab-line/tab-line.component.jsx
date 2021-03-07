@@ -2,7 +2,7 @@ import React from 'react';
 
 import content from '../../../table.content';
 
-import TabCell from '../../components/tab-cell/tab-cell.component';
+import TabCell from '../../multiplication-tab/tab-cell/tab-cell.component';
 import TabEmptyCell from '../tab-empty-cell/tab-empty-cell.component';
 
 const TabLine = props => {

@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import MainPage from './main-page.page';
+import AdditionSubtraction from './addition-subtraction.page';
 
 const setUp = (props = {}) => {
-    return shallow(<MainPage {...props} />);
+    return shallow(<AdditionSubtraction {...props} />);
 }
 
-describe('MainPage page test set', () => {
+describe('AdditionSubtraction page test set', () => {
 
     let component;
     beforeEach(() => {
