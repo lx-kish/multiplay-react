@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/multiplay-react/static/css/main.5e865c46.chunk.css",
-    "main.js": "/multiplay-react/static/js/main.76741b74.chunk.js",
-    "main.js.map": "/multiplay-react/static/js/main.76741b74.chunk.js.map",
+    "main.js": "/multiplay-react/static/js/main.b66ed852.chunk.js",
+    "main.js.map": "/multiplay-react/static/js/main.b66ed852.chunk.js.map",
     "runtime-main.js": "/multiplay-react/static/js/runtime-main.32f8f433.js",
     "runtime-main.js.map": "/multiplay-react/static/js/runtime-main.32f8f433.js.map",
     "static/js/2.ab1920f5.chunk.js": "/multiplay-react/static/js/2.ab1920f5.chunk.js",
     "static/js/2.ab1920f5.chunk.js.map": "/multiplay-react/static/js/2.ab1920f5.chunk.js.map",
     "index.html": "/multiplay-react/index.html",
-    "precache-manifest.1230a80a31ae07cd3a225455d7cfc8ce.js": "/multiplay-react/precache-manifest.1230a80a31ae07cd3a225455d7cfc8ce.js",
+    "precache-manifest.88806f0639ae01b357cef51cc18e9231.js": "/multiplay-react/precache-manifest.88806f0639ae01b357cef51cc18e9231.js",
     "service-worker.js": "/multiplay-react/service-worker.js",
     "static/css/main.5e865c46.chunk.css.map": "/multiplay-react/static/css/main.5e865c46.chunk.css.map",
     "static/js/2.ab1920f5.chunk.js.LICENSE.txt": "/multiplay-react/static/js/2.ab1920f5.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.32f8f433.js",
     "static/js/2.ab1920f5.chunk.js",
     "static/css/main.5e865c46.chunk.css",
-    "static/js/main.76741b74.chunk.js"
+    "static/js/main.b66ed852.chunk.js"
   ]
 }
