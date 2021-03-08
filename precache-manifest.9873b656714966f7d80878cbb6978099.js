@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e871f4eb142a13654efe81f740ee63f",
+    "revision": "4fb530bfa0b29343d074a587293ca528",
     "url": "/multiplay-react/index.html"
   },
   {
-    "revision": "49e02d7fb92bb1fe69b9",
+    "revision": "db829f6df96682d9c84a",
     "url": "/multiplay-react/static/css/main.5e865c46.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/multiplay-react/static/js/2.ab1920f5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "49e02d7fb92bb1fe69b9",
-    "url": "/multiplay-react/static/js/main.b66ed852.chunk.js"
+    "revision": "db829f6df96682d9c84a",
+    "url": "/multiplay-react/static/js/main.4d0c57de.chunk.js"
   },
   {
     "revision": "4b296a1d5225ce27ac3b",
