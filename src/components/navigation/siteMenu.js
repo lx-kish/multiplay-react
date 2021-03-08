@@ -1,7 +1,8 @@
 const SiteMenu = [
   {
     name: 'Multiplication table',
-    link: '/multiplay-react/multiplication-tab',
+    link: '/multiplay-react',
+    // link: '/multiplay-react/multiplication-tab',
     className: ''
   },
   // {
