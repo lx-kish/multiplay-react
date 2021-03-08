@@ -17,12 +17,12 @@ const MultiplicationTab = props => {
         sticky: 0,
         display: false,
         subtract: false,
-        open: false,
+        open: false
     });
 
     const menuRef = React.useRef();
 
-	const setState = () => {
+	const setOpen = () => {
 		setFullState({
 			...fullState,
 			open: !fullState.open
@@ -36,7 +36,23 @@ const MultiplicationTab = props => {
 		});
 	};
   
-	useClickOutside(menuRef, hideSliderMenu);
+	// useClickOutside(menuRef, hideSliderMenu);
+
+    // const setSubtract = () => {
+    //     console.log('setSubtract inside ===> ', fullState.subtract);
+	// 	setFullState({
+	// 		...fullState,
+	// 		open: !fullState.subtract
+	// 	});
+	// };
+
+    // const setChecked = () => {
+    //     console.log('setChecked inside ===> ', fullState.display);
+	// 	setFullState({
+	// 		...fullState,
+	// 		display: !fullState.display
+	// 	});
+	// };
 
     /**
      * Returns mathematical sign for addition or subtraction
@@ -67,9 +83,7 @@ const MultiplicationTab = props => {
         let inputs = document.getElementsByClassName('component__input');
         // console.log(typeof(inputs))
         inputs = Array.from(inputs);
-        inputs.map(input => {
-            input.value = '';
-        })
+        inputs.map(input => input.value = '')
     };
 
     /**
@@ -134,18 +148,23 @@ const MultiplicationTab = props => {
 
     }, [fullState.subtract]);
 
+    // console.log('fullState.display from multiplication tab component ===> ', fullState.display);
+    // console.log('fullState.subtract from multiplication tab component ===> ', fullState.subtract);
+
     return (
         <>
-        	<NavigationBar open={fullState.open} setOpen={setState} hideSliderMenu={hideSliderMenu} menuRef={menuRef} />
+        	<NavigationBar open={fullState.open} setOpen={setOpen} hideSliderMenu={hideSliderMenu} menuRef={menuRef} />
             <Header
                 display={fullState.display}
                 subtract={fullState.subtract}
+                // setChecked={setChecked}
                 setChecked={() =>
                     setFullState({
                         ...fullState,
                         display: !fullState.display
                     })
                 }
+                // setSubtract={setSubtract}
                 setSubtract={() =>
                     setFullState({
                         ...fullState,

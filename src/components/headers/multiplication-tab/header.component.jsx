@@ -32,6 +32,8 @@ const content = {
 
 const Header = props => {
 
+    // console.log('Header multitab props ===> ', props.setSubtract);
+    // console.log('Header multitab props ===> ', props.setChecked);
     const showCollapsible = () => {
         return props.display ?
             <div className='collapsible__part'>
@@ -68,6 +70,7 @@ const Header = props => {
                     className='collapsible__btn'
                     id='collapsible-toggle'
                     checked={props.display}
+                    // onChange={props.setChecked}
                     onChange={() => props.setChecked()}
                 />
                 <label htmlFor='collapsible-toggle' className='collapsible__icon-box'>
@@ -78,6 +81,7 @@ const Header = props => {
                 <Toggler
                     {...content.togglerAddSubtract}
                     checked={props.subtract}
+                    // onChange={props.setSubtract}
                     onChange={() => props.setSubtract()}
                 />
                 <hr className='header__hr' />

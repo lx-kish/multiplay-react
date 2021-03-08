@@ -26,6 +26,7 @@ const TabLine = props => {
                         </React.Fragment>
                     )
                 }
+                else return null;
             }
             )}
             <div className={`tab__heading-cell tab__heading-cell--side ${content.styles[props.value]}`}>{props.value}</div>
